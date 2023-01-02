@@ -9,7 +9,8 @@ body {
 	animation: gradient 15s ease infinite;
 	height: 100vh;
     font-family: fantasy;
-
+    margin: 0;
+    padding: 0;
 }
 
 @keyframes gradient {
