@@ -1,3 +1,53 @@
+/* body {
+    background: rgb(2,0,36);
+    background: linear-gradient(146deg, rgba(2,0,36,1) 0%, rgba(69,69,159,1) 76%, rgba(54,187,214,1) 100%);
+} */
+
 body {
-    background-color: red;
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+    font-family: fantasy;
+
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+nav {
+    display: flex;
+    align-items: baseline;
+    margin: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color:black;
+    font-size: 25px;
+}
+
+.logo {
+    margin: 25px;
+}
+
+.pages {
+    display: flex;
+    position: relative;
+    left: 130px;
+    gap: 30px;
+}
+
+footer {
+    border: 1px solid black;
+    padding: 10px;
 }
