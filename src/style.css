@@ -27,7 +27,8 @@ body {
 nav {
     display: flex;
     align-items: baseline;
-    margin: 20px;
+    padding: 20px;
+    background-color: rgba(0,0,0, 0.4);
 }
 
 nav a {
@@ -43,11 +44,17 @@ nav a {
 .pages {
     display: flex;
     position: relative;
-    left: 130px;
-    gap: 30px;
+    left: 30%;
+    gap: 50px;
+}
+
+nav a:hover {
+    text-decoration: underline;
 }
 
 footer {
-    border: 1px solid black;
+    border: 2px solid black;
     padding: 10px;
+    display: flex;
+    justify-content: center;
 }
