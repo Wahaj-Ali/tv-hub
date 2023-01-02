@@ -4,7 +4,7 @@
   "description": "<a name=\"readme-top\"></a>\r <div align=\"center\">",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --coverage",
     "start": "webpack serve --open",
     "build": "webpack"
   },
@@ -20,8 +20,10 @@
   },
   "homepage": "https://github.com/Wahaj-Ali/tv-hub#readme",
   "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.20.11",
     "css-loader": "^6.7.1",
     "html-webpack-plugin": "^5.5.0",
+    "jest": "^29.3.1",
     "style-loader": "^3.3.1",
     "webpack": "^5.75.0",
     "webpack-cli": "^4.10.0",
