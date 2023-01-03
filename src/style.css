@@ -59,3 +59,45 @@ footer {
     display: flex;
     justify-content: center;
 }
+
+.showslist {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+    padding: 20px;
+    margin: 10px;
+}
+
+.shows {
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 3px 3px 5px;
+}
+
+.show-name {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 200px;
+    margin: 5px;
+}
+
+.show-name span {
+    width: 150px;
+}
+
+.comments {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5px;
+}
+
+.btn {
+    background: none;
+    border: 1px solid black;
+    box-shadow: 4px 7px 5px;
+    margin: 5px;
+    font-family: fantasy;
+}
