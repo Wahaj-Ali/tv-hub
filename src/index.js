@@ -1,23 +1,23 @@
 import './style.css';
 
 class Shows {
-    constructor(){
-        this.API_URL = 'https://api.tvmaze.com/';
-        this.shows = [];
-    }
+  constructor() {
+    this.API_URL = 'https://api.tvmaze.com/';
+    this.shows = [];
+  }
 
-    getShows = async(showName) => {
-        const Query = `search/shows?q=${showName}`;
-        const list = await fetch(`${this.API_URL}${Query}`).then((response) => response.json());
-        this.shows = [...list];
+    getShows = async (showName) => {
+      const Query = `search/shows?q=${showName}`;
+      const list = await fetch(`${this.API_URL}${Query}`).then((response) => response.json());
+      this.shows = [...list];
     }
 
     displayShows = async () => {
-        await this.getShows(6);
+      await this.getShows(6);
 
-        const showsList = this.shows.reduce((prev, curr) => {
-            if(curr.show.image) {
-             prev += `
+      const showsList = this.shows.reduce((prev, curr) => {
+        if (curr.show.image) {
+          prev += `
              <div class="shows">
              
                <div class="show-image">
@@ -36,11 +36,11 @@ class Shows {
          
            </div>
            `;
-            }
-            return prev;
-         }, '');
+        }
+        return prev;
+      }, '');
 
-        document.querySelector('.showslist').innerHTML = showsList;
+      document.querySelector('.showslist').innerHTML = showsList;
     }
 }
 
