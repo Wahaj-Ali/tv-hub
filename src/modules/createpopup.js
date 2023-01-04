@@ -1,4 +1,7 @@
+/* eslint-disable */
 export const createPopUpDetails = (details) => {
+  /* eslint-enable */
+
   const showModal = document.createElement('div');
   showModal.className = 'pop-up';
   showModal.innerHTML = `

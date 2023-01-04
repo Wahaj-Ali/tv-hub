@@ -5,11 +5,13 @@ class Shows {
     this.API_URL = 'https://api.tvmaze.com/';
     this.shows = [];
   }
+
   getShows = async (showName) => {
     const Query = `search/shows?q=${showName}`;
     const list = await fetch(`${this.API_URL}${Query}`).then((response) => response.json());
     this.shows = [...list];
   }
+  
   displayShows = async () => {
     await this.getShows('the');
     const showsList = this.shows.reduce((prev, curr) => {
