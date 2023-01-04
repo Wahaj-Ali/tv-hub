@@ -54,8 +54,8 @@ class Shows {
       body: JSON.stringify({ item_id: itemId }),
     }).then((response) => response.text(response)).then((json) => json);
   }
+  
   registerLikes = () => {
-
     const likeButtons = document.querySelectorAll('.fa-heart');
     likeButtons.forEach((btn) => btn.addEventListener('click', (e) => {
       e.preventDefault();
