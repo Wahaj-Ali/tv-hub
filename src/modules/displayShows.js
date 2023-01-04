@@ -1,6 +1,5 @@
 import { addCommentPopupEvent } from './displaypopup.js';
 
-
 class Shows {
   constructor() {
     this.API_URL = 'https://api.tvmaze.com/';
@@ -52,10 +51,10 @@ class Shows {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ item_id: itemId }), 
+      body: JSON.stringify({ item_id: itemId }),
     }).then((response) => response.text(response)).then((json) => json);
   }
-   registerLikes = () => {
+  registerLikes = () => {
 
     const likeButtons = document.querySelectorAll('.fa-heart');
     likeButtons.forEach((btn) => btn.addEventListener('click', (e) => {
@@ -65,7 +64,6 @@ class Shows {
       this.addLike(movieID);
     }));
   };
-
 }
 
 export default Shows;
