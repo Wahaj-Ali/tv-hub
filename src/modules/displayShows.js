@@ -1,8 +1,10 @@
 import { addCommentPopupEvent } from './displaypopup.js';
 
+
 class Shows {
   constructor() {
     this.API_URL = 'https://api.tvmaze.com/';
+    this.like_URL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/CvrqAzoVr9PCSxK9Vq6U/likes';
     this.shows = [];
   }
 
@@ -25,8 +27,9 @@ class Shows {
                    <div class="show-name">
                      <span>${curr.show.name}</span>
                      <div class="like"> 
-                     <i class="fa fa-heart fa-lg" data-pos=${curr.show.id}></i> 
+                     <i class="fa fa-heart fa-lg" data-pos=${curr.show.id} id="${curr.show.id}"></i> 
                     </div>
+                    
                    </div>
                    <div class="comments">
                      <button data-id="${curr.show.id}"  class="btn" id="${curr.show.id}">Comments</button>
@@ -40,7 +43,29 @@ class Shows {
     }, '');
     document.querySelector('.showslist').innerHTML = showsList;
     addCommentPopupEvent();
+    this.registerLikes();
   }
+
+  addLike = async (itemId) => {
+    await fetch(this.like_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ item_id: itemId }), 
+    }).then((response) => response.text(response)).then((json) => json);
+  }
+   registerLikes = () => {
+
+    const likeButtons = document.querySelectorAll('.fa-heart');
+    likeButtons.forEach((btn) => btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const movieID = btn.getAttribute('id');
+      document.getElementById(movieID).innerHTML = 1;
+      this.addLike(movieID);
+    }));
+  };
+
 }
 
 export default Shows;
