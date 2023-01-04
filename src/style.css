@@ -161,3 +161,7 @@ textarea {
 .titles {
   color: #23a6d5;
 }
+
+#hideframe {
+  display: none;
+}
