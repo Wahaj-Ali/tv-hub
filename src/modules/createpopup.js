@@ -1,7 +1,7 @@
 export const createPopUpDetails = (details) => {
-    const showModal = document.createElement('div');
-    showModal.className = 'pop-up';
-    showModal.innerHTML = `
+  const showModal = document.createElement('div');
+  showModal.className = 'pop-up';
+  showModal.innerHTML = `
     <div class="pop-head">
     <h2 class = "showheading">${details.name}</h2>
     <button type="button" class="cancel">
@@ -29,5 +29,5 @@ export const createPopUpDetails = (details) => {
   
     </div>
   `;
-    return showModal;
-  };
+  return showModal;
+};
