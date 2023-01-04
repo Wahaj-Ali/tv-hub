@@ -11,7 +11,7 @@ class Shows {
     const list = await fetch(`${this.API_URL}${Query}`).then((response) => response.json());
     this.shows = [...list];
   }
-  
+
   displayShows = async () => {
     await this.getShows('the');
     const showsList = this.shows.reduce((prev, curr) => {
