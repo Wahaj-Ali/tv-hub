@@ -1,14 +1,11 @@
 import './style.css';
-import Shows from './modules/displayShows.js';
-
-const series = new Shows();
-series.displayShows();
 
 const showDetails = async (id) => {
   const baseApi = 'https://api.tvmaze.com/shows/';
   const list = await fetch(`${baseApi}${id}`).then((response) => response.json());
   return list;
-}
+};
+
 const createPopUpDetails = (details) => {
   const showModal = document.createElement('div');
   showModal.className = 'pop-up';
@@ -41,23 +38,66 @@ Comment...
 `;
   return showModal;
 };
+
 const displayPoUp = async (id) => {
   const popupModal = document.querySelector('.window-popup');
   popupModal.innerHTML = '';
   const movieDetail = await showDetails(id);
   popupModal.append(createPopUpDetails(movieDetail));
-  // popupModal.style.display = 'flex';
 };
 
-export const addCommentPopupEvent = () => {
+const addCommentPopupEvent = () => {
   const commentBtns = document.querySelectorAll('.btn');
   commentBtns.forEach((btn) => btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      displayPoUp(btn.id);
+    e.preventDefault();
+    displayPoUp(btn.id);
   }));
 };
-// Removes the Popup on click close button and Navigate to see live and see source on click
-windowPopup.addEventListener('click', (e) => {
-  const buttonClass = e.target.classList.contains('seeButtons');
-    windowPopup.classList.remove('pop-body');
-});
+
+class Shows {
+  constructor() {
+    this.API_URL = 'https://api.tvmaze.com/';
+    this.shows = [];
+  }
+
+      getShows = async (showName) => {
+        const Query = `search/shows?q=${showName}`;
+        const list = await fetch(`${this.API_URL}${Query}`).then((response) => response.json());
+        this.shows = [...list];
+      }
+
+      displayShows = async () => {
+        await this.getShows(6);
+
+        const showsList = this.shows.reduce((prev, curr) => {
+          if (curr.show.image) {
+            prev += `
+               <div class="shows">
+               
+                 <div class="show-image">
+                  <img src=${curr.show.image.medium} />
+                 </div>
+                 <div class="show-name">
+                   <span>${curr.show.name}</span>
+                   <div class="like"> 
+                   <i class="fa fa-heart fa-lg" data-pos=${curr.show.id}></i> 
+                  </div>
+                 </div>
+                 <div class="comments">
+                   <button data-id="${curr.show.id}"  class="btn" id="${curr.show.id}">Comments</button>
+                   <button class="btn" id="${curr.show.id}">Reservations</button>
+                 </div>
+           
+             </div>
+             `;
+          }
+          return prev;
+        }, '');
+
+        document.querySelector('.showslist').innerHTML = showsList;
+        addCommentPopupEvent();
+      }
+}
+
+const series = new Shows();
+series.displayShows();
