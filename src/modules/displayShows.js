@@ -21,14 +21,10 @@ class Shows {
   displayShows = async () => {
     await this.getShows('the');
     await this.getLikes();
-    
+
     const showsList = this.shows.reduce((prev, curr) => {
       if (curr.show.image) {
-        const index = this.likes.findIndex((like) => 
-          like.item_id === curr.show.id
-        );
-
-        console.log(index);
+        const index = this.likes.findIndex((like) => like.item_id === curr.show.id);
         const msgLikes = index <= 0 ? 0 : this.likes[index].likes;
 
         prev += `
@@ -79,7 +75,7 @@ class Shows {
     const likeButtons = document.querySelectorAll('.fa-heart');
     likeButtons.forEach((btn) => btn.addEventListener('click', (e) => {
       e.preventDefault();
-      const movieID = parseInt(btn.getAttribute('id'),10);
+      const movieID = parseInt(btn.getAttribute('id'), 10);
       // document.getElementById(movieID).innerHTML = 1;
       this.addLike(movieID, btn);
     }));
