@@ -14,19 +14,23 @@ class Shows {
     this.shows = [...list];
   }
 
+  getLikes = async () => {
+    this.likes = await fetch(this.like_URL).then((response) => response.json());
+  }
+
   displayShows = async () => {
     await this.getShows('the');
     await this.getLikes();
+    
     const showsList = this.shows.reduce((prev, curr) => {
       if (curr.show.image) {
-        const index = this.likes.findIndex((like) => {like.item_id === curr.show.id
-          // console.log(like.item_id);
-          // console.log(curr.show.id); 
-      });
-        
+        const index = this.likes.findIndex((like) => 
+          like.item_id === curr.show.id
+        );
+
         console.log(index);
-        const msgLikes = index <= 0 ?  0 : this.likes[index].likes;
-    
+        const msgLikes = index <= 0 ? 0 : this.likes[index].likes;
+
         prev += `
                  <div class="shows">
                  
@@ -56,12 +60,7 @@ class Shows {
     this.registerLikes();
   }
 
-  getLikes = async () => {
-    this.likes = await fetch(this.like_URL).then((response) => response.json());
-    console.log(this.likes);
-  }
-
-  addLike = async (itemId,likeButton) => {
+  addLike = async (itemId, likeButton) => {
     await fetch(this.like_URL, {
       method: 'POST',
       headers: {
@@ -80,9 +79,9 @@ class Shows {
     const likeButtons = document.querySelectorAll('.fa-heart');
     likeButtons.forEach((btn) => btn.addEventListener('click', (e) => {
       e.preventDefault();
-      const movieID = btn.getAttribute('id');
+      const movieID = parseInt(btn.getAttribute('id'),10);
       // document.getElementById(movieID).innerHTML = 1;
-      this.addLike(movieID,btn);
+      this.addLike(movieID, btn);
     }));
   };
 }
