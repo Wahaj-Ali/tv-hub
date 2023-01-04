@@ -18,6 +18,10 @@ class Shows {
     this.likes = await fetch(this.like_URL).then((response) => response.json());
   }
 
+  showsCounter = () => {
+    return this.shows.length;
+  }
+
   displayShows = async () => {
     await this.getShows('the');
     await this.getLikes();
@@ -52,6 +56,7 @@ class Shows {
       return prev;
     }, '');
     document.querySelector('.showslist').innerHTML = showsList;
+    document.querySelector('.shows-ctr').innerHTML = this.showsCounter();
     addCommentPopupEvent();
     this.registerLikes();
   }
