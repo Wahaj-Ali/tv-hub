@@ -90,7 +90,7 @@ footer {
 
 .comments {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   justify-content: center;
   margin: 5px;
 }

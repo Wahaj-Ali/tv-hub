@@ -44,7 +44,6 @@ class Shows {
                    </div>
                    <div class="comments">
                      <button data-id="${curr.show.id}"  class="btn" id="${curr.show.id}">Comments</button>
-                     <button class="btn-reservations" id="${curr.show.id}">Reservations</button>
                    </div>
              
                </div>
