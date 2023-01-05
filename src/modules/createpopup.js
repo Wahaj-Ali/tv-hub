@@ -21,7 +21,7 @@ export const createPopUpDetails = (details) => {
   
    </div>
     <div class= "modal-head">
-        <div class = "summary">${details.summary}</div>
+        <div class = "summary"><p id="sumTxt">Summary:</p>   ${details.summary}</div>
         <div><span class="titles">Genre: </span> ${details.genres}</div>
         <div><span class="titles">OfficialSite: </span> <a href="${details.officialSite}" target="_blank">OfficialSite</a></div>
         <div><span class="titles">Type: </span> ${details.type}</div>
@@ -57,6 +57,8 @@ export const addComment = async () => {
     const commentslist = await generateComment(formSubmitBtn.id);
     commentSection.innerHTML = '';
     commentSection.append(commentslist);
+    const counter = commentsCounter();
+    document.querySelector('.comments-ctr').innerHTML = counter;
     commentForm.reset();
   });
 };
