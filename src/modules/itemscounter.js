@@ -3,4 +3,5 @@ const showsCounter = () => {
   return numb;
 };
 
+export const itemCount = (showList) => showList.length;
 export default showsCounter;
