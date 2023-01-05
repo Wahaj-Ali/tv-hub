@@ -51,6 +51,10 @@ nav a {
   gap: 50px;
 }
 
+.pages li {
+  list-style: none;
+}
+
 nav a:hover {
   text-decoration: underline;
 }

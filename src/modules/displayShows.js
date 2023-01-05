@@ -1,4 +1,5 @@
 import { addCommentPopupEvent } from './displaypopup.js';
+import showsCounter from './itemscounter.js';
 
 class Shows {
   constructor() {
@@ -52,6 +53,7 @@ class Shows {
       return prev;
     }, '');
     document.querySelector('.showslist').innerHTML = showsList;
+    document.querySelector('.shows-ctr').innerHTML = showsCounter();
     addCommentPopupEvent();
     this.registerLikes();
   }
@@ -76,7 +78,6 @@ class Shows {
     likeButtons.forEach((btn) => btn.addEventListener('click', (e) => {
       e.preventDefault();
       const movieID = parseInt(btn.getAttribute('id'), 10);
-      // document.getElementById(movieID).innerHTML = 1;
       this.addLike(movieID, btn);
     }));
   };
