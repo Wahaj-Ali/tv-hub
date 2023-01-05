@@ -1,4 +1,4 @@
-const commUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/rhcywbVKX5F63o89jgrY/comments';
+const commUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/CvrqAzoVr9PCSxK9Vq6U/comments';
 
 export const renderComment = async (id, name, comment) => {
   const response = await fetch(`${commUrl}`, {
@@ -11,10 +11,8 @@ export const renderComment = async (id, name, comment) => {
   return response;
 };
 
-const fetchUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/rhcywbVKX5F63o89jgrY/comments';
-
 const fetchComment = async (id) => {
-  const reponseComment = await fetch(`${fetchUrl}?item_id=${id}`);
+  const reponseComment = await fetch(`${commUrl}?item_id=${id}`);
   const itemData = await reponseComment.json();
   return itemData;
 };

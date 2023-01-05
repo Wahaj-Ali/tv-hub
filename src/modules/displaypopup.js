@@ -1,4 +1,4 @@
-import { createPopUpDetails } from './createpopup.js';
+import { createPopUpDetails, addComment } from './createpopup.js';
 import { generateComment } from './rendercomment.js';
 
 const showDetails = async (id) => {
@@ -13,6 +13,7 @@ const addClosePopUpevent = () => {
     popupModal.style.display = 'none';
   });
 };
+
 const displayPoUp = async (id) => {
   const popupModal = document.querySelector('.window-popup');
   popupModal.innerHTML = '';

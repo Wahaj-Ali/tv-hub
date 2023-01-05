@@ -1,10 +1,8 @@
 /* eslint-disable */
-import { renderComment } from "./rendercomment.js";
-import { generateComment } from "./rendercomment.js";
+import { renderComment,generateComment } from "./rendercomment.js";
 
 export const createPopUpDetails = (details) => {
   /* eslint-enable */
-
 
   const showModal = document.createElement('div');
   showModal.className = 'pop-up';
