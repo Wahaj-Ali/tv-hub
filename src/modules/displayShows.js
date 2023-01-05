@@ -42,7 +42,7 @@ class Shows {
                     </div>
                     
                    </div>
-                   <div class="comments">
+                   <div class="comment">
                      <button data-id="${curr.show.id}"  class="btn" id="${curr.show.id}">Comments</button>
                    </div>
              

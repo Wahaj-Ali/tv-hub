@@ -107,6 +107,9 @@ footer {
   display: flex;
   justify-content: center;
   margin: 5px;
+  color: red;
+  font-weight: 600;
+  text-decoration: underline;
 }
 
 .btn {
@@ -117,12 +120,9 @@ footer {
   font-family: fantasy;
 }
 
-.btn-reservations {
-  background: none;
-  border: 1px solid black;
-  box-shadow: 4px 7px 5px;
-  margin: 5px;
-  font-family: fantasy;
+.comment {
+  display: flex;
+  justify-content: center;
 }
 
 .pop-body {
@@ -144,6 +144,12 @@ footer {
   width: 100%;
 }
 
+.modal-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .cancel {
   font-size: 50px;
   width: 40px;
@@ -154,6 +160,27 @@ footer {
   justify-content: right;
   align-items: center;
   color: #67798e;
+}
+
+.modal-image {
+  display: flex;
+  justify-content: center;
+}
+
+.summary {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+}
+
+#sumTxt {
+  margin: 5px;
+  font-weight: 600;
+  color: red;
+}
+
+.con-com {
+  padding: 5px;
 }
 
 label,
@@ -171,6 +198,13 @@ textarea {
   box-shadow: 1px 1px 1px #999;
 }
 
+.atc {
+  display: flex;
+  justify-content: center;
+  color: red;
+  text-decoration: underline;
+}
+
 .titles {
   color: #23a6d5;
 }
@@ -184,6 +218,8 @@ textarea {
   flex-direction: column;
   gap: 10px;
   margin: 10px;
+  border: 2px solid greenyellow;
+  padding: 5px;
 }
 
 .submit-btn {
@@ -201,4 +237,7 @@ textarea {
 
 .comment-li {
   list-style: none;
+  padding: 3px;
+  margin: 3px;
+  border: 2px solid greenyellow;
 }
