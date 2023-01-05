@@ -24,9 +24,9 @@ body {
 
 nav {
   display: flex;
-  align-items: baseline;
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.4);
+  height: 60px;
 }
 
 nav a {
@@ -37,6 +37,19 @@ nav a {
 
 .logo {
   margin: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo img {
+  height: 100px;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .pages {
@@ -44,6 +57,8 @@ nav a {
   position: relative;
   left: 30%;
   gap: 50px;
+  justify-content: center;
+  align-items: center;
 }
 
 .pages li {
