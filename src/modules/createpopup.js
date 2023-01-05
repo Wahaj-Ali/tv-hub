@@ -1,6 +1,10 @@
 /* eslint-disable */
+import { renderComment } from "./rendercomment.js";
+import { generateComment } from "./rendercomment.js";
+
 export const createPopUpDetails = (details) => {
   /* eslint-enable */
+
 
   const showModal = document.createElement('div');
   showModal.className = 'pop-up';
@@ -25,12 +29,35 @@ export const createPopUpDetails = (details) => {
         <div><span class="titles">Rating: </span> ${details.rating.average}</div>
     </div>
   
-  <textarea id="story" name="story"
-            rows="2" cols="77">
-  Comment...
-  </textarea>
+    <p class="comments">Comments</p>
+    <div class="con-comm">
+    </div>
+    <p class="atc">Add To Comment</p>
+    <form class="form" action="">
+    <input type="text" class="name" id="user" placeholder="Enter Your Name" required>
+    <textarea id="comment" cols = 30 rows = 5 placeholder="Add your Comment" required></textarea>
+    <button type="submit" class="submit-btn" id="${details.id}">Add Comment</button>
+    </form>
   
     </div>
   `;
   return showModal;
+};
+
+export const addComment = async () => {
+  const commentForm = document.querySelector('.form');
+  const formSubmitBtn = document.querySelector('.submit-btn');
+  const commentSection = document.querySelector('.con-comm');
+  commentForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const name = commentForm.elements[0];
+    const comment = commentForm.elements[1];
+    await renderComment(formSubmitBtn.id, name.value, comment.value);
+
+    const commentslist = await generateComment(formSubmitBtn.id);
+    commentSection.innerHTML = '';
+    commentSection.append(commentslist);
+
+    commentForm.reset();
+  });
 };
