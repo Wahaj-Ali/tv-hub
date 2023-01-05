@@ -155,7 +155,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n// const showsCounter = (shows) =>  shows.length;\r\n\r\nconst showsCounter = () => {\r\n    let numb = document.querySelector(\".showslist\").children.length;;\r\n    return numb;\r\n}\r\n \r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (showsCounter);\r\n\r\n\n\n//# sourceURL=webpack://tv-hub/./src/modules/itemscounter.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__),\n/* harmony export */   \"itemCount\": () => (/* binding */ itemCount)\n/* harmony export */ });\nconst showsCounter = () => {\r\n  const numb = document.querySelector('.showslist').children.length;\r\n  return numb;\r\n};\r\n\r\nconst itemCount = (showList) => showList.length;\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (showsCounter);\r\n\n\n//# sourceURL=webpack://tv-hub/./src/modules/itemscounter.js?");
 
 /***/ })
 
