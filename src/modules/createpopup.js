@@ -58,7 +58,7 @@ export const addComment = async () => {
     commentSection.innerHTML = '';
     commentSection.append(commentslist);
     const counter = commentsCounter();
-    document.querySelector('.comments-ctr').innerHTML = counter;  
+    document.querySelector('.comments-ctr').innerHTML = counter;
     commentForm.reset();
   });
 };
