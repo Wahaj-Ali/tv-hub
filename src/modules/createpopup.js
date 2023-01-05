@@ -1,5 +1,6 @@
 /* eslint-disable */
 import { renderComment,generateComment } from "./rendercomment.js";
+import commentsCounter from "./commentscounter.js";
 
 export const createPopUpDetails = (details) => {
   /* eslint-enable */
@@ -26,8 +27,8 @@ export const createPopUpDetails = (details) => {
         <div><span class="titles">Type: </span> ${details.type}</div>
         <div><span class="titles">Rating: </span> ${details.rating.average}</div>
     </div>
-  
-    <p class="comments">Comments</p>
+    
+    <p class="comments">Comments(<span class="comments-ctr"></span>)</p>
     <div class="con-comm">
     </div>
     <p class="atc">Add To Comment</p>
@@ -43,19 +44,19 @@ export const createPopUpDetails = (details) => {
 };
 
 export const addComment = async () => {
+  const counter = commentsCounter();
   const commentForm = document.querySelector('.form');
   const formSubmitBtn = document.querySelector('.submit-btn');
   const commentSection = document.querySelector('.con-comm');
+  document.querySelector('.comments-ctr').innerHTML = counter;
   commentForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const name = commentForm.elements[0];
     const comment = commentForm.elements[1];
     await renderComment(formSubmitBtn.id, name.value, comment.value);
-
     const commentslist = await generateComment(formSubmitBtn.id);
     commentSection.innerHTML = '';
     commentSection.append(commentslist);
-
     commentForm.reset();
   });
 };

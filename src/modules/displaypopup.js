@@ -16,6 +16,7 @@ const addClosePopUpevent = () => {
 
 const displayPoUp = async (id) => {
   const popupModal = document.querySelector('.window-popup');
+
   popupModal.innerHTML = '';
   const movieDetail = await showDetails(id);
   popupModal.append(createPopUpDetails(movieDetail));
