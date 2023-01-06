@@ -26,7 +26,7 @@ export const createPopUpDetails = (details) => {
         <div><span class="titles">OfficialSite: </span> <a href="${details.officialSite}" target="_blank">OfficialSite</a></div>
         <div><span class="titles">Youtube link: </span>
           <a id="${details.id === 69 ? 'showframe' : 'hideframe'}" href="https://www.youtube.com/embed/-WYdUaK54fU" target="_blank">THE BLACKLIST Youtube link</a>
-          <a id="${details.id ===  28276 ? 'showframe' : 'hideframe'}" href="https://www.youtube.com/embed/ndl1W4ltcmg" target="_blank">THE WITCHER Youtube link</a>
+          <a id="${details.id === 28276 ? 'showframe' : 'hideframe'}" href="https://www.youtube.com/embed/ndl1W4ltcmg" target="_blank">THE WITCHER Youtube link</a>
           <a  id="${details.id === 38963 ? 'showframe' : 'hideframe'}" href="https://www.youtube.com/embed/aOC8E8z_ifw" target="_blank">The MANDALORIAN Youtube link</a>
           <a id="${details.id === 37781 ? 'showframe' : 'hideframe'}" href="https://www.youtube.com/embed/BqqShroJH44" target="_blank">THE PERIPHERAL Youtube link</a>
           <a id="${details.id === 13 ? 'showframe' : 'hideframe'}" href="https://www.youtube.com/embed/IgVyroQjZbE" target="_blank">THE FLASH  Youtube link</a>
@@ -66,7 +66,7 @@ export const addComment = async () => {
     e.preventDefault();
     const name = commentForm.elements[0];
     const comment = commentForm.elements[1];
-    if(!(name==='' || comment === '') ){
+    if (!(name === '' || comment === '')) {
       await renderComment(formSubmitBtn.id, name.value, comment.value);
       const commentslist = await generateComment(formSubmitBtn.id);
       commentSection.innerHTML = '';
@@ -75,6 +75,5 @@ export const addComment = async () => {
       document.querySelector('.comments-ctr').innerHTML = counter;
       commentForm.reset();
     }
- 
   });
 };

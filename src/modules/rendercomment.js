@@ -43,10 +43,8 @@ export const generateComment = async (id) => {
     noCommentLi.textContent = 'Be the first to comment';
     commentUl.append(noCommentLi);
   } else {
-
     comments.forEach((comment) => {
       commentUl.append(createComments(comment));
-
     });
   }
   return commentUl;
