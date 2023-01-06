@@ -171,6 +171,9 @@ You can deploy this project using [Github Pages](https://docs.github.com/en/page
 
 <img src="/images/github.svg" alt="logo" width="18"  height="18" />[githubhandle](https://github.com/Wahaj-Ali)
 <br>
+<img src="/images/twitter.svg" alt="logo" width="18"  height="18" /> [twitterhandle](https://twitter.com/Ali96Wahaj
+)
+<br>
 <img src="/images/linkedin.svg" alt="logo" width="18"  height="18" />[linkedIn](https://www.linkedin.com/in/wahaj-ali96/)
   <br>
 
@@ -187,7 +190,7 @@ You can deploy this project using [Github Pages](https://docs.github.com/en/page
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/Wahaj-Ali/tv-hub/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -203,11 +206,11 @@ If you like this project give me a star.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-Thanks to our friend [Lucas](https://github.com/Lucash2022) for a good insight of the code.
-
 Thanks to our friend [Kashif](https://github.com/Kashif-Saleem-Ghuman) for a good insight file loaders and styling.
 
 Thanks to our friend [Alex](https://github.com/Osoro254Alex) for a good insight of the overview of the project.
+
+Thanks to our friend [Ernest Korir](https://github.com/ernestkorir) for a good insight of the code.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
