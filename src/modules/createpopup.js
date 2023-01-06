@@ -1,10 +1,7 @@
-
-import { renderComment,generateComment } from "./rendercomment.js";
-import commentsCounter from "./commentscounter.js";
+import  commentsCounter  from './commentscounter.js';
+import { renderComment, generateComment } from './rendercomment.js';
 
 export const createPopUpDetails = (details) => {
- 
-
   const showModal = document.createElement('div');
   showModal.className = 'pop-up';
   showModal.innerHTML = `
