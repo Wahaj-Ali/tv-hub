@@ -18,7 +18,6 @@ const fetchComment = async (id) => {
   if (!reponseComment.ok) {
     return null;
   }
-
   return itemData;
 };
 
