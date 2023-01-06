@@ -153,7 +153,7 @@ You can deploy this project using [Github Pages](https://docs.github.com/en/page
 
 <!-- AUTHORS -->
 
-## 👥 Author
+## 👥 Authors
 
 <a name="authors"></a>
 
