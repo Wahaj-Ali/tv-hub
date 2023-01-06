@@ -242,6 +242,6 @@ Thanks to our friend [Ernest Korir](https://github.com/ernestkorir) for a good i
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](/MIT) licensed.
+This project is [MIT](https://github.com/Wahaj-Ali/tv-hub/blob/dev/MIT.md) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
