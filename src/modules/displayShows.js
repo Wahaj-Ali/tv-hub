@@ -20,7 +20,7 @@ class Shows {
   }
 
   displayShows = async () => {
-    await this.getShows('amazing');
+    await this.getShows('the');
     await this.getLikes();
 
     const showsList = this.shows.reduce((prev, curr) => {
