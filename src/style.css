@@ -246,3 +246,7 @@ textarea {
   margin: 3px;
   border: 2px solid greenyellow;
 }
+
+.no_comment_li {
+  list-style: none;
+}
