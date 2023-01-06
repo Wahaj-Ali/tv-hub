@@ -203,7 +203,11 @@ If you like this project give me a star.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-Thanks to my friend [Lucas](https://github.com/Lucash2022) for a good insight of the code.
+Thanks to our friend [Lucas](https://github.com/Lucash2022) for a good insight of the code.
+
+Thanks to our friend [Kashif](https://github.com/Kashif-Saleem-Ghuman) for a good insight file loaders and styling.
+
+Thanks to our friend [Alex](https://github.com/Osoro254Alex) for a good insight of the overview of the project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
