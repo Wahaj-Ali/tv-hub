@@ -53,12 +53,15 @@ export const addComment = async () => {
     e.preventDefault();
     const name = commentForm.elements[0];
     const comment = commentForm.elements[1];
-    await renderComment(formSubmitBtn.id, name.value, comment.value);
-    const commentslist = await generateComment(formSubmitBtn.id);
-    commentSection.innerHTML = '';
-    commentSection.append(commentslist);
-    const counter = commentsCounter();
-    document.querySelector('.comments-ctr').innerHTML = counter;
-    commentForm.reset();
+    if(!(name==='' || comment === '') ){
+      await renderComment(formSubmitBtn.id, name.value, comment.value);
+      const commentslist = await generateComment(formSubmitBtn.id);
+      commentSection.innerHTML = '';
+      commentSection.append(commentslist);
+      const counter = commentsCounter();
+      document.querySelector('.comments-ctr').innerHTML = counter;
+      commentForm.reset();
+    }
+ 
   });
 };
