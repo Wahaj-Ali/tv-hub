@@ -1,4 +1,4 @@
-import  commentsCounter  from './commentscounter.js';
+import commentsCounter from './commentsCounter.js';
 import { renderComment, generateComment } from './rendercomment.js';
 
 export const createPopUpDetails = (details) => {

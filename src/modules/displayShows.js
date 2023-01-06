@@ -1,4 +1,4 @@
-import { addCommentPopupEvent } from './displaypopup.js';
+import addCommentPopupEvent from './displaypopup.js';
 import showsCounter from './itemscounter.js';
 
 class Shows {
