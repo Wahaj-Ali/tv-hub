@@ -28,7 +28,6 @@ const displayPoUp = async (id) => {
   addComment();
 };
 
-/* eslint-disable */
 export const addCommentPopupEvent = () => {
   const commentBtns = document.querySelectorAll('.btn');
   commentBtns.forEach((btn) => btn.addEventListener('click', (e) => {
@@ -36,4 +35,3 @@ export const addCommentPopupEvent = () => {
     displayPoUp(btn.id);
   }));
 };
-/* eslint-enable */
