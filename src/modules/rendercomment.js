@@ -1,9 +1,5 @@
-
 const apiKey = process.env.API_KEY;
-const end = '/comments'
-
-console.log(apiKey);
-console.log(end);
+const end = '/comments';
 const commUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/';
 
 export const renderComment = async (id, name, comment) => {
