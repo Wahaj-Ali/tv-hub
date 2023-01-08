@@ -156,7 +156,7 @@ footer {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   width: 80%;
   height: 70%;
   background-color: #fff;
@@ -304,7 +304,7 @@ input {
   }
 
   .window-popup {
-    width: 50% I !important;
+    width: 50% !important;
     height: 90% !important;
   }
 
