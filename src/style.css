@@ -91,7 +91,7 @@ footer {
 }
 
 .shows {
-  background: white;
+  background: linear-gradient(-45deg, #52a2ee, #7667a7, #23a6d5, #d53023);
   border-radius: 5px;
   padding: 10px;
   margin: 10px;
