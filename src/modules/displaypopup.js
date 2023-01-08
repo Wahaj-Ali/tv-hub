@@ -28,12 +28,12 @@ const displayPoUp = async (id) => {
   addComment();
 };
 
-const addCommentPopupEvent = () => {
+/* eslint-disable */
+export const addCommentPopupEvent = () => {
   const commentBtns = document.querySelectorAll('.btn');
   commentBtns.forEach((btn) => btn.addEventListener('click', (e) => {
     e.preventDefault();
     displayPoUp(btn.id);
   }));
 };
-
-export default addCommentPopupEvent;
+/* eslint-enable */

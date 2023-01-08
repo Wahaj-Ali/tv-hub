@@ -1,4 +1,4 @@
-const apiKey = process.env.API_KEY;
+const apiKey = '1qXMsA9cV2Pv46sO3dUb';
 const end = '/comments';
 const commUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/';
 

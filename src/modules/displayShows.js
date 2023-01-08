@@ -1,10 +1,10 @@
-import addCommentPopupEvent from './displaypopup.js';
+import { addCommentPopupEvent } from './displaypopup.js';
 import showsCounter from './itemscounter.js';
 
 class Shows {
   constructor() {
     this.API_URL = 'https://api.tvmaze.com/';
-    this.apiKey = process.env.API_KEY;
+    this.apiKey = 'CvrqAzoVr9PCSxK9Vq6U';
     this.end = '/likes';
     this.like_URL = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${this.apiKey}${this.end}`;
     this.shows = [];
@@ -21,8 +21,8 @@ class Shows {
     this.likes = await fetch(this.like_URL).then((response) => response.json());
   }
 
-  displayShows = async () => {
-    await this.getShows('the');
+  displayShows = async (search) => {
+    await this.getShows(search);
     await this.getLikes();
 
     const showsList = this.shows.reduce((prev, curr) => {
