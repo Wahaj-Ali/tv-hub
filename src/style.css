@@ -6,25 +6,12 @@ body {
   padding: 0;
 }
 
-/* @keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
-} */
-
 nav {
   display: flex;
   padding: 20px;
   background-color: #121522;
-  height: 60px;
+  height: 30px;
+  border-bottom: 2px solid #751111;
 }
 
 nav a {
@@ -42,15 +29,15 @@ nav .s {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex: 1;
 }
 
 .pages {
   display: flex;
-  position: relative;
-  left: 30%;
   gap: 50px;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  flex: 4;
 }
 
 .pages li {
@@ -143,17 +130,17 @@ footer {
 
 .window-popup {
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80%;
-  height: 70%;
-  background-color: #fff;
+  top: 5%;
+  left: 5%;
+  width: 90vw;
+  height: 85vh;
+  background-color: #121522;
   border-radius: 4px;
-  box-shadow: 2px 2px 8px rgb(0 0 0 / 10%);
+  /* box-shadow: 2px 2px 8px rgb(0 0 0 / 10%); */
   padding: 16px;
   overflow-y: scroll;
   -webkit-font-smoothing: antialiased;
+  color: white;
 }
 
 .pop-head {
@@ -279,12 +266,12 @@ textarea {
 
 input {
   border: 0.5px solid rgb(224, 224, 224);
-  height: 1.5rem;
+  /* height: 1.5rem; */
   outline: 0;
   border-radius: 5px;
   margin: 2px;
   padding: 2%;
-  width: 80%;
+  width: 350px;
 }
 
 @media only screen and (max-width: 600px) {
