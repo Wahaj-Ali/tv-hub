@@ -40,17 +40,6 @@ nav .s {
   font-size: 25px;
 }
 
-.logo {
-  margin: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.logo img {
-  height: 100px;
-}
-
 .title {
   display: flex;
   justify-content: center;
