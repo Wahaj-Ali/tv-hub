@@ -1,14 +1,12 @@
 body {
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
+  background-color: #181b1f;
   height: 100vh;
   font-family: Helvetica, sans-serif;
   margin: 0;
   padding: 0;
 }
 
-@keyframes gradient {
+/* @keyframes gradient {
   0% {
     background-position: 0% 50%;
   }
@@ -20,23 +18,23 @@ body {
   100% {
     background-position: 0% 50%;
   }
-}
+} */
 
 nav {
   display: flex;
   padding: 20px;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: #121522;
   height: 60px;
 }
 
 nav a {
   text-decoration: none;
-  color: black;
+  color: white;
   font-size: 25px;
 }
 
 nav .s {
-  color: black;
+  color: white;
   font-size: 25px;
 }
 
@@ -64,10 +62,15 @@ nav a:hover {
 }
 
 footer {
-  border: 2px solid black;
+  border: 2px solid #751111;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
   padding: 10px;
   display: flex;
   justify-content: center;
+  color: white;
+  background-color: #121522;
 }
 
 .showslist {
@@ -79,17 +82,29 @@ footer {
   margin: 10px;
 }
 
+.btn {
+  padding: 2px 25px;
+    color: white;
+    background: #751111;
+    border-color: black;
+    font-family: fantasy;
+}
+
 .shows {
-  background: linear-gradient(-45deg, #52a2ee, #7667a7, #23a6d5, #d53023);
+  background-color: #121522;
   border-radius: 5px;
   padding: 10px;
   margin: 10px;
   box-shadow: 3px 3px 5px;
-  transition: all 0.5s ease-in-out;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  transition: transform .2s;
+}
+
+.shows:hover {
+  transform: scale(1.05); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 
 .show-name {
@@ -102,6 +117,7 @@ footer {
 
 .show-name span {
   font-weight: bold;
+  color: white;
 }
 
 .comments {
@@ -116,30 +132,14 @@ footer {
   padding-left: 0;
 }
 
-.btn {
-  background: none;
-  border: 1px solid black;
-  box-shadow: 4px 7px 5px;
-  margin: 5px;
-  font-family: fantasy;
-}
-
 .comment {
   display: flex;
   justify-content: center;
 }
 
-/* .pop-body {
-  padding: 2%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(255, 255, 255);
-  width: 90%;
-  margin: 4% auto;
-  border-radius: 10px;
-} */
+.like {
+  color: white;
+}
 
 .window-popup {
   position: fixed;

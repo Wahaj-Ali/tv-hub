@@ -4,27 +4,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
   <title>TV-Hub</title>
 
 <script defer src="runtime.js"></script><script defer src="main.js"></script></head>
 
 <body>
-  <header>
-    <nav>
-      <div class="title">
-        <h1>TV Hub</h1>
-      </div>
-      <div class="pages">
-        <li>
-          <input type="text" placeholder="Search your food by name" name="search" id="searchInput" spellcheck="false"
-            data-ms-editor="true" onfocus="this.value=''" value="Search your TV shows by name" />
-        </li>
-        <li><a href="">Home</a></li>
-        <li class="s">Shows(<span class="shows-ctr"></span>)</li>
-      </div>
+  <!-- <header> -->
+  <nav>
+    <div class="title">
+      <h1>TV Hub</h1>
+    </div>
+    <div class="pages">
+      <li>
+        <input type="text" placeholder="Search TV Show" name="search" id="searchInput" spellcheck="false"
+          data-ms-editor="true" onfocus="this.value=''" value="Search your TV shows by name" />
+      </li>
+      <li><a href="">Home</a></li>
+      <li class="s">Shows(<span class="shows-ctr"></span>)</li>
+    </div>
 
-    </nav>
-  </header>
+  </nav>
+  <!-- </header> -->
 
   <main>
     <section class="window-popup pop-body" id="modal-wraper" style="display: none;">
