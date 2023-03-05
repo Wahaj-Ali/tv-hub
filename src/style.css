@@ -74,8 +74,8 @@ footer {
 }
 
 .showslist {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   align-content: center;
   justify-content: space-evenly;
   padding: 20px;
