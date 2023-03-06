@@ -1,69 +1,43 @@
 body {
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
+  background-color: #181b1f;
   height: 100vh;
   font-family: Helvetica, sans-serif;
   margin: 0;
   padding: 0;
 }
 
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
 nav {
   display: flex;
   padding: 20px;
-  background-color: rgba(0, 0, 0, 0.4);
-  height: 60px;
+  background-color: #121522;
+  height: 30px;
+  border-bottom: 2px solid #751111;
 }
 
 nav a {
   text-decoration: none;
-  color: black;
+  color: white;
   font-size: 25px;
 }
 
 nav .s {
-  color: black;
+  color: white;
   font-size: 25px;
-}
-
-.logo {
-  margin: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.logo img {
-  height: 100px;
 }
 
 .title {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex: 1;
 }
 
 .pages {
   display: flex;
-  position: relative;
-  left: 30%;
   gap: 50px;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  flex: 4;
 }
 
 .pages li {
@@ -75,32 +49,50 @@ nav a:hover {
 }
 
 footer {
-  border: 2px solid black;
+  border: 2px solid #751111;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
   padding: 10px;
   display: flex;
   justify-content: center;
+  color: white;
+  background-color: #121522;
 }
 
 .showslist {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   align-content: center;
   justify-content: space-evenly;
   padding: 20px;
   margin: 10px;
 }
 
+.btn {
+  padding: 2px 25px;
+  color: white;
+  background: #751111;
+  border-color: black;
+  font-family: fantasy;
+}
+
 .shows {
-  background: linear-gradient(-45deg, #52a2ee, #7667a7, #23a6d5, #d53023);
+  background-color: #121522;
   border-radius: 5px;
   padding: 10px;
   margin: 10px;
   box-shadow: 3px 3px 5px;
-  transition: all 0.5s ease-in-out;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  transition: transform .2s;
+}
+
+.shows:hover {
+  transform: scale(1.05);
+  /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 
 .show-name {
@@ -113,6 +105,7 @@ footer {
 
 .show-name span {
   font-weight: bold;
+  color: white;
 }
 
 .comments {
@@ -121,18 +114,11 @@ footer {
   font-weight: 600;
   margin-top: 3%;
   font-size: 1.2rem;
+  justify-content: center;
 }
 
 #comments-section {
   padding-left: 0;
-}
-
-.btn {
-  background: none;
-  border: 1px solid black;
-  box-shadow: 4px 7px 5px;
-  margin: 5px;
-  font-family: fantasy;
 }
 
 .comment {
@@ -140,36 +126,45 @@ footer {
   justify-content: center;
 }
 
-/* .pop-body {
-  padding: 2%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(255, 255, 255);
-  width: 90%;
-  margin: 4% auto;
-  border-radius: 10px;
-} */
+.like {
+  color: white;
+}
 
 .window-popup {
+  background-color: rgba(24, 27, 31, 0.7);
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80%;
-  height: 70%;
-  background-color: #fff;
+  top: 0;
+  width: 95vw;
+  height: 100%;
   border-radius: 4px;
-  box-shadow: 2px 2px 8px rgb(0 0 0 / 10%);
   padding: 16px;
-  overflow-y: scroll;
+  overflow: hidden;
   -webkit-font-smoothing: antialiased;
+  color: white;
+}
+
+.pop-up {
+  display: flex;
+  flex-direction: column;
+  width: 45rem;
+  background-color: #121522;
+  height: 100vh;
+  overflow-y: auto;
+  align-self: normal;
+  position: relative;
+  left: 25%;
+}
+
+.popup-top-section {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .pop-head {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
   align-items: center;
 }
@@ -178,6 +173,7 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  align-items: center;
 }
 
 .cancel {
@@ -199,6 +195,7 @@ footer {
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding: 0 35px;
 }
 
 #sumTxt {
@@ -232,7 +229,7 @@ textarea {
 .atc {
   display: flex;
   justify-content: center;
-  color: red;
+  color: #751111;
   text-decoration: underline;
 }
 
@@ -265,6 +262,11 @@ textarea {
   display: flex;
 }
 
+.comment-container {
+  padding: 11px 0;
+  margin: 10px 0;
+}
+
 .comment-li {
   list-style: none;
   margin: 2% 0;
@@ -290,12 +292,12 @@ textarea {
 
 input {
   border: 0.5px solid rgb(224, 224, 224);
-  height: 1.5rem;
+  /* height: 1.5rem; */
   outline: 0;
   border-radius: 5px;
   margin: 2px;
   padding: 2%;
-  width: 80%;
+  width: 350px;
 }
 
 @media only screen and (max-width: 600px) {

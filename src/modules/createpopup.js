@@ -8,18 +8,23 @@ export const createPopUpDetails = (details) => {
   const showModal = document.createElement('div');
   showModal.className = 'pop-up';
   showModal.innerHTML = `
-    <div class="pop-head">
-    <h2 class = "showheading">${details.name}</h2>
+    
+  <div>
     <button type="button" class="cancel">
              ×
-           </button>
-    </div>
+    </button>
+  </div>
     
     <div class="popup-top-section">
     <div class= 'modal-image'>
     <img src="${details.image.medium}"; alt="cover image" id="modal-cover"/>
-  
    </div>
+
+   <div class="pop-head">
+    <h2 class = "showheading">${details.name}</h2>
+    
+    </div>
+   
     <div class= "modal-head">
         <div class = "summary"><p id="sumTxt">Summary:</p>   ${details.summary}</div>
         <a class = "yt-link" id="${details.id === 69 ? 'showframe' : 'hideframe'}" href="https://www.youtube.com/embed/-WYdUaK54fU" target="_blank"><i class="fa-brands fa-youtube"></i> Watch on YouTube</a>
@@ -59,13 +64,15 @@ export const createPopUpDetails = (details) => {
     <div class="comment-container">
 
     <p class="comments">Comments(<span class="comments-ctr"></span>)</p>
-    <div class="con-comm">
-    </div>
+    
     <form class="form" action="">
     <input type="text" class="name" id="user" placeholder="Enter Your Name" required>
     <input id="comment" cols = 30 rows = 5 placeholder="Add your Comment" required></input>
     <button type="submit" class="submit-btn" id="${details.id}">Add Comment</button>
     </form>
+
+    <div class="con-comm">
+    </div>
   </div>
     </div>
   `;

@@ -40,7 +40,7 @@ class Shows {
                      <span>${curr.show.name}</span>
                      <div class="like"> 
                      <i class="fa fa-heart fa-lg" data-pos=${curr.show.id} id="${curr.show.id}"></i>
-                     <span>${msgLikes}</span> Likes 
+                     <span>${msgLikes}</span> 
                     </div>
                     
                    </div>
