@@ -114,6 +114,7 @@ footer {
   font-weight: 600;
   margin-top: 3%;
   font-size: 1.2rem;
+  justify-content: center;
 }
 
 #comments-section {
@@ -163,7 +164,7 @@ footer {
 
 .pop-head {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
   align-items: center;
 }
@@ -172,6 +173,7 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  align-items: center;
 }
 
 .cancel {
@@ -193,6 +195,7 @@ footer {
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding: 0 35px;
 }
 
 #sumTxt {
@@ -226,7 +229,7 @@ textarea {
 .atc {
   display: flex;
   justify-content: center;
-  color: red;
+  color: #751111;
   text-decoration: underline;
 }
 
@@ -257,6 +260,11 @@ textarea {
 
 .name {
   display: flex;
+}
+
+.comment-container {
+  padding: 11px 0;
+  margin: 10px 0;
 }
 
 .comment-li {

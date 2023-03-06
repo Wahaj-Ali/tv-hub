@@ -64,13 +64,15 @@ export const createPopUpDetails = (details) => {
     <div class="comment-container">
 
     <p class="comments">Comments(<span class="comments-ctr"></span>)</p>
-    <div class="con-comm">
-    </div>
+    
     <form class="form" action="">
     <input type="text" class="name" id="user" placeholder="Enter Your Name" required>
     <input id="comment" cols = 30 rows = 5 placeholder="Add your Comment" required></input>
     <button type="submit" class="submit-btn" id="${details.id}">Add Comment</button>
     </form>
+
+    <div class="con-comm">
+    </div>
   </div>
     </div>
   `;
