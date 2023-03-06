@@ -71,10 +71,10 @@ footer {
 
 .btn {
   padding: 2px 25px;
-    color: white;
-    background: #751111;
-    border-color: black;
-    font-family: fantasy;
+  color: white;
+  background: #751111;
+  border-color: black;
+  font-family: fantasy;
 }
 
 .shows {
@@ -91,7 +91,8 @@ footer {
 }
 
 .shows:hover {
-  transform: scale(1.05); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  transform: scale(1.05);
+  /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 
 .show-name {
@@ -129,18 +130,35 @@ footer {
 }
 
 .window-popup {
+  background-color: rgba(24, 27, 31, 0.7);
   position: fixed;
-  top: 5%;
-  left: 5%;
-  width: 90vw;
-  height: 85vh;
-  background-color: #121522;
+  top: 0;
+  width: 95vw;
+  height: 100%;
   border-radius: 4px;
-  /* box-shadow: 2px 2px 8px rgb(0 0 0 / 10%); */
   padding: 16px;
-  overflow-y: scroll;
+  overflow: hidden;
   -webkit-font-smoothing: antialiased;
   color: white;
+}
+
+.pop-up {
+  display: flex;
+  flex-direction: column;
+  width: 45rem;
+  background-color: #121522;
+  height: 100vh;
+  overflow-y: auto;
+  align-self: normal;
+  position: relative;
+  left: 25%;
+}
+
+.popup-top-section {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .pop-head {

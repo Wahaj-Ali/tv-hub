@@ -11,11 +11,15 @@ const addClosePopUpevent = () => {
   closeBtn.addEventListener('click', () => {
     const popupModal = document.querySelector('.window-popup');
     popupModal.style.display = 'none';
+    const body = document.body;
+  body.style.overflow = 'scroll';
   });
 };
 
 const displayPoUp = async (id) => {
   const popupModal = document.querySelector('.window-popup');
+  const body = document.body;
+  body.style.overflow = 'hidden';
 
   popupModal.innerHTML = '';
   const movieDetail = await showDetails(id);
