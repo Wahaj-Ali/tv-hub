@@ -87,11 +87,12 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: transform .2s;
+  transition: transform 0.2s;
 }
 
 .shows:hover {
   transform: scale(1.05);
+
   /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 
@@ -176,7 +177,7 @@ footer {
   position: relative;
   left: 25%;
   border-radius: 10px;
-  box-shadow: -1px 0px 14px #ffffff5c;
+  box-shadow: -1px 0 14px #ffffff5c;
 }
 
 .pop-up::-webkit-scrollbar {
@@ -325,6 +326,7 @@ textarea {
 
 input {
   border: 0.5px solid rgb(224, 224, 224);
+
   /* height: 1.5rem; */
   outline: 0;
   border-radius: 5px;

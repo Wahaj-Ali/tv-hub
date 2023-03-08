@@ -1,5 +1,5 @@
-import { createPopUpDetails, addComment } from './createpopup.js';
-import { generateComment } from './rendercomment.js';
+import { createPopUpDetails, addComment } from './createpopup';
+import { generateComment } from './rendercomment';
 
 const showDetails = async (id) => {
   const baseApi = 'https://api.tvmaze.com/shows/';
@@ -11,14 +11,14 @@ const addClosePopUpevent = () => {
   closeBtn.addEventListener('click', () => {
     const popupModal = document.querySelector('.window-popup');
     popupModal.style.display = 'none';
-    const body = document.body;
-  body.style.overflow = 'scroll';
+    const { body } = document;
+    body.style.overflow = 'scroll';
   });
 };
 
 const displayPoUp = async (id) => {
   const popupModal = document.querySelector('.window-popup');
-  const body = document.body;
+  const { body } = document;
   body.style.overflow = 'hidden';
 
   popupModal.innerHTML = '';
