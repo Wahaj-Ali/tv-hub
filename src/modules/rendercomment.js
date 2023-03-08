@@ -30,7 +30,8 @@ const createComments = ({ comment, username, creation_date }) => {
   const commentli = document.createElement('li');
   commentli.className = 'comment-li';
   commentli.innerHTML = `
-   <span>${cDate}: </span><span>${username}: </span><span>${comment}</span>
+  <p class="date"><span><i class="fa-solid fa-user"> </i><span>${username} </span> </span><span>${cDate} </span></p>
+  <p class = "user-comment"><span> ${comment} </span></p>
   `;
   return commentli;
 };

@@ -1,4 +1,4 @@
-import Shows from './modules/displayShows.js';
+import Shows from './modules/displayShows';
 import './style.css';
 
 const userData = {
@@ -44,11 +44,8 @@ const series = new Shows();
 window.addEventListener('load', async () => {
   displayLoader(true);
   series.displayShows(dataOBJ.search);
-searchInput.addEventListener('change', () => {
-  series.displayShows(searchInput.value);
+  searchInput.addEventListener('change', () => {
+    series.displayShows(searchInput.value);
+  });
+  displayLoader(false);
 });
-displayLoader(false);
-})
-
-
-

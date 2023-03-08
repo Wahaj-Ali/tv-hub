@@ -1,5 +1,5 @@
-import { addCommentPopupEvent } from './displaypopup.js';
-import showsCounter from './itemscounter.js';
+import { addCommentPopupEvent } from './displaypopup';
+import showsCounter from './itemscounter';
 
 class Shows {
   constructor() {
