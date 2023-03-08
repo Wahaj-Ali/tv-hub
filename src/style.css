@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Vibur&display=swap');
+
 body {
   background-color: #181b1f;
   height: 100vh;
@@ -30,6 +32,15 @@ nav .s {
   justify-content: center;
   align-items: center;
   flex: 1;
+  font-family: 'Vibur', cursive;
+  color: #bc1d1d;
+}
+
+.t1 {
+  font-family: 'Vibur', cursive;
+  font-weight: 400;
+  color: #fee;
+  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #f44, 0 0 0.5em #f44, 0 0 0.1em #f44, 0 10px 3px #000;
 }
 
 .pages {
@@ -87,13 +98,11 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: transform 0.2s;
+  transition-duration: 200ms;
 }
 
-.shows:hover {
-  transform: scale(1.05);
-
-  /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+.btn:hover {
+  background-color: #bc1d1d;
 }
 
 .show-name {
@@ -227,6 +236,15 @@ footer {
   padding: 0 35px;
 }
 
+.summary p {
+  margin: 2% 0;
+  background-color: #4a4d54;
+  font-size: 0.875rem;
+  padding: 10px;
+  width: 100%;
+  border-radius: 10px;
+}
+
 #sumTxt {
   width: 100%;
   margin: 5px;
@@ -234,6 +252,7 @@ footer {
   color: red;
   text-align: left;
   font-size: 1.5rem;
+  background: none;
 }
 
 .con-com {
@@ -281,10 +300,12 @@ textarea {
   width: 35%;
   align-self: center;
   background: rgb(98, 87, 247);
-  border: 0;
   border-radius: 5px;
   color: white;
-  height: 3rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .name {
@@ -335,44 +356,49 @@ input {
   width: 350px;
 }
 
-@media only screen and (max-width: 600px) {
-  nav {
-    display: none;
+@media only screen and (max-width: 768px) {
+  nav a,
+  nav .s {
+    font-size: 15px;
+  }
+
+  .pages {
+    gap: 25px;
+  }
+
+  .title {
+    font-size: 15px;
+    margin-right: 5px;
+  }
+
+  .t1 {
+    font-size: 20px;
   }
 
   .window-popup {
-    width: 50% !important;
-    height: 90% !important;
-  }
-
-  .showslist {
-    grid-template-columns: 1fr;
-    padding: 0;
-    margin: 5%;
-  }
-
-  .shows {
-    height: 70vh;
+    width: 90vw;
   }
 
   .pop-up {
-    margin: 2%;
+    left: 0;
   }
 
-  .pop-head {
-    margin: 4% 0;
+  #comments-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  #sumTxt {
-    font-size: 1.2rem;
-    margin: 4%;
+  form input {
+    width: 15rem;
   }
 
-  input {
-    height: 3rem;
+  .pages li input {
+    width: 100px;
   }
 
   .submit-btn {
-    width: 50%;
+    font-size: 12px;
+    width: 6rem;
   }
 }
