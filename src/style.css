@@ -79,10 +79,10 @@ footer {
 
 .shows {
   background-color: #121522;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 10px;
   margin: 10px;
-  box-shadow: 3px 3px 5px;
+  box-shadow: 3px 3px 5px #ffffff5c;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -131,7 +131,7 @@ footer {
 }
 
 .window-popup {
-  background-color: rgba(24, 27, 31, 0.7);
+  background-color: rgb(24 27 31 / 91%);
   position: fixed;
   top: 0;
   width: 95vw;
@@ -143,16 +143,44 @@ footer {
   color: white;
 }
 
+.date {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 5px;
+}
+
+.date i {
+  padding: 8px;
+  border-radius: 50%;
+  background-color: #fa0437;
+  margin-right: 8px;
+}
+
+.user-comment {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  padding: 10px;
+  margin: 0;
+}
+
 .pop-up {
   display: flex;
   flex-direction: column;
   width: 45rem;
   background-color: #121522;
-  height: 100vh;
+  height: 95vh;
   overflow-y: auto;
   align-self: normal;
   position: relative;
   left: 25%;
+  border-radius: 10px;
+  box-shadow: -1px 0px 14px #ffffff5c;
+}
+
+.pop-up::-webkit-scrollbar {
+  display: none;
 }
 
 .popup-top-section {
@@ -270,6 +298,11 @@ textarea {
 .comment-li {
   list-style: none;
   margin: 2% 0;
+  background-color: #4a4d54;
+  font-size: 0.875rem;
+  padding: 10px;
+  width: 100%;
+  border-radius: 8px;
 }
 
 .no_comment_li {
