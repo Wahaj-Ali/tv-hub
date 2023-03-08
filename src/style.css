@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Vibur&display=swap');
+
 body {
   background-color: #181b1f;
   height: 100vh;
@@ -30,6 +32,14 @@ nav .s {
   justify-content: center;
   align-items: center;
   flex: 1;
+  font-family: 'Vibur', cursive;
+  color: #bc1d1d;
+}
+
+.t1 {
+  font: 400 5vh "Vibur";
+  color: #fee;
+  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff4444, 0 0 0.5em #ff4444, 0 0 0.1em #ff4444, 0 10px 3px #000;
 }
 
 .pages {
@@ -92,8 +102,6 @@ footer {
 
 .shows:hover {
   transform: scale(1.05);
-
-  /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 
 .show-name {
