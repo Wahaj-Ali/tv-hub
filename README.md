@@ -45,7 +45,7 @@
 
 # 📖 TV Hub app <a name="about-project"></a>
 
->  The JavaScript capstone project (remember what they are?) is about building a TV hub web application based on an external API(TVmaze DB). You will select an API that provides data about a topic that you like and then build the webapp around it. The webapp will have 2 user interfaces .
+>  TV show web app! With our user-friendly interface, you can easily search for and find all the information you need about any show, including detailed descriptions and ratings. But that's not all! The web app also allows you to engage with your favorite shows in new and exciting ways. You can "like" and comment on any of your favorite shows, sharing your thoughts and opinions with other fans from around the world. To create this incredible resource, we've leveraged the power of the TVmaze API to bring you the most accurate and up-to-date information about every show. Whether you're a casual viewer or a die-hard fan, you'll find everything you need to stay up-to-date on all the latest TV shows and trends.
 
 **Leaderboard App**
 
