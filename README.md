@@ -1,12 +1,5 @@
 <a name="readme-top"></a>
-<div align="center">
 
-  <img src="/images/murple_logo.png" alt="logo" width="140"  height="auto" />
-  <br/>
-
-  <h3><b>Microverse</b></h3>
-
-</div>
 <div align="left">
   <h1>Project: TV Hub</h1>
 
@@ -44,6 +37,7 @@
 <!-- PROJECT DESCRIPTION -->
 
 # 📖 TV Hub app <a name="about-project"></a>
+![Tv hub screens mockup](https://github.com/Wahaj-Ali/tv-hub/assets/111431787/c0dc7d34-0ddc-44be-a573-bb176069634b)
 
 >  TV show web app! With our user-friendly interface, you can easily search for and find all the information you need about any show, including detailed descriptions and ratings. But that's not all! The web app also allows you to engage with your favorite shows in new and exciting ways. You can "like" and comment on any of your favorite shows, sharing your thoughts and opinions with other fans from around the world. To create this incredible resource, we've leveraged the power of the TVmaze API to bring you the most accurate and up-to-date information about every show. Whether you're a casual viewer or a die-hard fan, you'll find everything you need to stay up-to-date on all the latest TV shows and trends.
 
