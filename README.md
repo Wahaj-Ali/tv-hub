@@ -3,7 +3,7 @@
 <div align="left">
   <h1>Project: TV Hub</h1>
 
-## In this milestone We will Create the TV hub: with APIs:
+## In this milestone We will create the TV hub with APIs:
 
 > TV Hub! A user-friendly web app where you can easily search for and find all the information you need about any show, including detailed descriptions and ratings.
 
@@ -170,6 +170,13 @@ You can deploy this project using [Github Pages](https://docs.github.com/en/page
 <img src="/images/linkedin.svg" alt="logo" width="18"  height="18" />[linkedIn](https://www.linkedin.com/in/lucas-erkana-b30a0b3b/)
   <br>
 <img src="/images/facebook.svg" alt="logo" width="18"  height="18" />[facebook](https://www.facebook.com/lucash.toni)
+ <br>
+<img src="/images/medium.svg" alt="logo" width="18"  height="18" />[medium](https://medium.com/@lderkana21x)
+ <br>
+<img src="/images/stackoverflow.svg" alt="logo" width="18"  height="18" />[stackoverflow](https://stackoverflow.com/users/7663438/lucas-erkana)
+ <br>
+<img src="/images/frontend-mentor.svg" alt="logo" width="18"  height="18" />[frontend mentor](https://www.frontendmentor.io/profile/Lucash2022)
+ <br>
 
 👤 **Wahaj Ali**
 
